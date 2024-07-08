@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+}
+
+body {
+    background-color: #204051;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.container {
+    background-color: #3B6978;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 61px 7px #3B6978;
+    padding: 50px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1{
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    cursor: pointer;
+    color: #CAE8D5;
+}
+
+.header h1:hover{
+    transform: scale(1.1);
+    transition: ease-in-out;
+}
+
+form{
+    margin-top: 30px;
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid rgba(202, 232, 213, 0.479);
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+    color: #CAE8D5;
+    background-color: transparent;
+}
+
+input::placeholder{
+    opacity: .5;
+    color: #CAE8D5;
+    font-family: "Montserrat";
+}
+
+form ion-icon {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    opacity: .5;
+    color: #CAE8D5;
+}
+
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 50px;
+    grid-gap: 20px;
+}
+
+.item {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: .3s ease box-shadow;
+}
+
+.item:hover{
+    box-shadow: 0px 0px 20px 3px #84A9AC;
+}
+
+.item:nth-last-child(1){
+    margin-bottom: 0;
+}
+
+.item h3{
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    background-color: #2a4a5570;
+    color: aliceblue;
+    bottom: -70px;
+    font-weight: 300;
+    transition: .5s ease-in-out bottom;
+}
+
+.item:hover h3 {
+    bottom: 0;
+}
+
+.load-more{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #204051;
+    padding: 20px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.load-more:hover{
+    background-color: #84A9AC;
+    transform: scale(1.1);
+    transition: ease-in-out;
+}
+
+@media only screen and (min-width: 900px ) {
+    .container{
+        max-width: 1160px;
+        padding: 100px;
+    }
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header h1 {
+        font-size: 50px;
+    }
+    .header input {
+        font-size: 24px;
+    }
+    .header ion-icon{
+        font-size: 24px;
+    }
+    .gallery{
+        grid-gap: 30px;
+    }
+}
