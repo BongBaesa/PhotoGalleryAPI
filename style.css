@@ -75,6 +75,7 @@ input{
     outline: none;
     color: #CAE8D5;
     background-color: transparent;
+    font-family: "Montserrat";
 }
 
 input::placeholder{
